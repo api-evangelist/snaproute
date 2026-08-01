@@ -1,11 +1,34 @@
 aid: snaproute
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/snaproute.png
 name: Snaproute
-description: Snaproute is a company surfaced as a portfolio company of lightspeed-venture-partners, norwest-venture-partners
-  and added to the API Evangelist network as a stub for enrichment. This profile is a lead awaiting the
-  enrichment pipeline.
+description: >-
+  SnapRoute was a cloud-native networking startup, backed by Lightspeed Venture
+  Partners and Norwest Venture Partners, that built a containerized, microservices-based
+  network operating system (its FlexSwitch / Cloud-Native Network OS) aimed at running
+  switch software with the same DevOps tooling used for application infrastructure.
+  Its public GitHub organization (github.com/snaproute) reflects that focus — OpenConfig
+  and YANG tooling (pyang/pyangbind), OpenNetworkLinux, netlink, sFlow, and a Docker-based
+  training lab — but it has been dormant since 2020 and ships no published REST/OpenAPI
+  interface, SDKs, or developer portal. The company no longer operates independently:
+  the snaproute.com domain now 301-redirects to infoblox.com, so there is no live API
+  surface to enrich. This profile records the verifiable remnants (GitHub organization,
+  domain posture) rather than a working developer program.
 url: https://raw.githubusercontent.com/api-evangelist/snaproute/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
+x-status: defunct
+x-status-note: snaproute.com 301-redirects to infoblox.com; GitHub org dormant since 2020; no live API surface
 x-backed-by:
 - lightspeed-venture-partners
 - norwest-venture-partners
@@ -13,9 +36,15 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-21'
 tags:
 - Company
+- Networking
+- Network Operating System
+- Cloud Native
+- SDN
+- Infrastructure
+- Defunct
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -23,5 +52,14 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/snaproute-domain-security.yml
 - type: Website
   url: https://snaproute.com
+- type: GitHubOrganization
+  url: https://github.com/snaproute
+x-enrichment:
+  date: '2026-07-21'
+  status: minimal
+  artifacts_added: 1
+  pass: local-v1
